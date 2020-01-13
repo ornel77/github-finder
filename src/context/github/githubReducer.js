@@ -16,10 +16,24 @@ export default (state, action) => {
                 loading:false
             }
             break;
+        case GET_USER:
+            return {
+                ...state,
+                user: action.payload,
+                loading:false
+            }
+            break;
         case SET_LOADING:
             return {
                 ...state,
                 loading: true
+            }
+            break;
+        case CLEAR_USERS:
+            return {
+                ...state,
+                users: [],
+                loading: false
             }
             break;
     
